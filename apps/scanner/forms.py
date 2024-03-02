@@ -6,7 +6,7 @@ class IPAddressForm(forms.Form):
     address = forms.CharField(widget=forms.Textarea)
 
     def clean_address(self):
-        address = self.cleaned_data['address'].split(',')
+        address = self.cleaned_data["address"].split(",")
         for ip in address:
             try:
                 validate_ipv46_address(ip.strip())
