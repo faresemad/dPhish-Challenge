@@ -1,0 +1,21 @@
+Pillow==10.1.0  # https://github.com/python-pillow/Pillow
+
+# Django
+# ------------------------------------------------------------------------------
+django==4.2.7  # pyup: < 5.0  # https://www.djangoproject.com/
+django-environ==0.11.2  # https://github.com/joke2k/django-environ
+# Django REST Framework
+djangorestframework==3.14.0  # https://github.com/encode/django-rest-framework
+# DRF-spectacular for api documentation
+drf-spectacular==0.26.5  # https://github.com/tfranzel/drf-spectacular
+
+# Added By Fares Emad
+# ------------------------------------------------------------------------------
+django-filter==23.5 # https://django-filter.readthedocs.io/en/stable/
+djoser==2.2.0 # https://djoser.readthedocs.io/en/latest/getting_started.html
+celery==5.3.6 # https://github.com/celery/celery
+django-celery-beat==2.5.0 # https://github.com/celery/django-celery-beat
+redis==5.0.1 # https://github.com/redis/redis-py
+channels==4.0.0 # https://channels.readthedocs.io/en/latest/
+channels_redis==4.2.0 # https://pypi.org/project/channels-redis/
+channels[daphne] # https://channels.readthedocs.io/en/latest/installation.html
