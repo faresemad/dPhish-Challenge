@@ -23,7 +23,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    # "apps.scanner",
+    "apps.scanner",
     "apps.notifications",
 ]
 
