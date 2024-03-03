@@ -7,3 +7,9 @@ class IPAddressSerializer(serializers.ModelSerializer):
     class Meta:
         model = IPAddress
         fields = ("id", "address", "created_at")
+
+
+class IPAddressRetrieveSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = IPAddress
+        fields = ("info",)

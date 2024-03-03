@@ -66,7 +66,7 @@ make up
         }
         ```
 
-2.  `api/scanner/ip-addresses/<ip-address>/`
+2.  `api/scanner/ip-addresses/<id>/`
 
         - Method: GET
         - Description: Get information about an IP Address.
