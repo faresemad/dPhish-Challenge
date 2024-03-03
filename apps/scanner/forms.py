@@ -6,10 +6,13 @@ class IPAddressForm(forms.Form):
     address = forms.CharField(widget=forms.Textarea)
 
     def clean_address(self):
-        address = self.cleaned_data["address"].split(",")
-        for ip in address:
+        address_list = self.cleaned_data["address"].split(",")
+        cleaned_addresses = []
+        for ip in address_list:
             try:
-                validate_ipv46_address(ip.strip())
+                cleaned_ip = ip.strip()
+                validate_ipv46_address(cleaned_ip)
+                cleaned_addresses.append(cleaned_ip)
             except forms.ValidationError:
                 raise forms.ValidationError(f"{ip.strip()} is not a valid IP address.")
-        return address
+        return cleaned_addresses

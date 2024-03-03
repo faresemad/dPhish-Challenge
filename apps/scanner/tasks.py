@@ -8,6 +8,6 @@ from apps.scanner.models import IPAddress
 def process_ip(ip_address):
     response = requests.get(f"https://ipinfo.io/{ip_address}/json")
     ip_data = response.json()
-    ip_data["ip"] = ip_address
-    ip = IPAddress.objects.create(address=ip_address, info=ip_data)
-    return ip.id
+    ipobject = IPAddress(ip_address=ip_address, data=ip_data)
+    ipobject.save()
+    return ipobject.id
