@@ -68,23 +68,22 @@ make up
 
 2.  `api/scanner/ip-addresses/<id>/`
 
-        - Method: GET
-        - Description: Get information about an IP Address.
-        - Request:
-            - Content-Type: application/json
-        - Response:
-            - Content-Type: application/json
-            - Body:
-
-                ```json
-                {
-                    "ip": "<IP Address>",
-                    "loc": "<Latitude, Longitude>",
-                    "org": "<Organization>",
-                    "city": "<City>",
-                    "readme": "<Readme>",
-                    "region": "<Region>",
-                    "country": "<Country>",
-                    "timezone": "<Timezone>"
-                }
-                ```
+    - Method: GET
+    - Description: Get information about an IP Address.
+    - Request:
+      - Content-Type: application/json
+    - Response:
+      - Content-Type: application/json
+      - Body:
+        ```json
+        {
+          "ip": "<IP Address>",
+          "loc": "<Latitude, Longitude>",
+          "org": "<Organization>",
+          "city": "<City>",
+          "readme": "<Readme>",
+          "region": "<Region>",
+          "country": "<Country>",
+          "timezone": "<Timezone>"
+        }
+        ```
