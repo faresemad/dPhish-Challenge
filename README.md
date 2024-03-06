@@ -35,7 +35,9 @@ pip install -r requirements/local.txt
   - install make for Windows
     - `https://gnuwin32.sourceforge.net/packages/make.htm`
   - install make for linux
-    `sudo apt-get install make`
+    - ```bash
+    sudo apt-get install make
+    ```
   - install docker for Windows
     - `https://docs.docker.com/docker-for-windows/install/`
   - install docker for linux
