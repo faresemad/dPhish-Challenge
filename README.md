@@ -11,7 +11,7 @@ This is a simple python script to get information about an IP Address. It uses t
 1. Clone the repository or download the code.
 
 ```bash
-git clone https://github.com/faresemad/HighTech.git
+git clone https://github.com/faresemad/dPhish-Challenge.git
 ```
 
 2. Create a virtual environment and install the requirements.
@@ -31,17 +31,39 @@ source venv/bin/activate
 pip install -r requirements/local.txt
 ```
 
-4. Build Project
+4. Install `make` and `docker` if not already installed.
+  - install make for Windows
+    - `https://gnuwin32.sourceforge.net/packages/make.htm`
+  - install make for linux
+    `sudo apt-get install make`
+  - install docker for Windows
+    - `https://docs.docker.com/docker-for-windows/install/`
+  - install docker for linux
+    - `https://docs.docker.com/engine/install/ubuntu/`
 
-```bash
-make build
-```
+5. Build Project
+- Build the project using the following command:
+  - With `make`:
+    ```bash
+    make build
+    ```
+  - Without `make`:
+    ```bash
+    docker-compose -f docker-compose.yml build
+    ```
 
-5. Run the code
 
-```bash
-make up
-```
+6. Run the code
+- Run the code using the following command:
+  - With `make`:
+    ```bash
+    make run
+    ```
+  - Without `make`:
+    ```bash
+    docker-compose -f docker-compose.yml up
+    ```
+
 
 ## API Endpoints
 
