@@ -1,6 +1,7 @@
 import requests
 from celery import shared_task
 
+from apps.notifications.views import send_notification
 from apps.scanner.models import IPAddress
 
 
@@ -10,4 +11,4 @@ def process_ip(ip_address):
     ip_data = response.json()
     ipobject = IPAddress(address=ip_address, info=ip_data)
     ipobject.save()
-    return ipobject.id
+    send_notification(ip_address)

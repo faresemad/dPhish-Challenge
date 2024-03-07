@@ -1,17 +1,14 @@
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
-from django.shortcuts import HttpResponse
 
 
-def test(request):
+def send_notification(ip_address):
     channel_layer = get_channel_layer()
-    user = request.user
     async_to_sync(channel_layer.group_send)(
-        "notification_broadcast",  # Group name
+        "notification_broadcast",
         {
             "type": "notification_message",
-            "message": "This is a message from broadcast",
-            "user": user.username,
+            "message": f"Done Process {ip_address}"
         },
     )
-    return HttpResponse("Sent")
+    return True
