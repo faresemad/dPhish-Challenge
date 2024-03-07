@@ -1,5 +1,6 @@
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
+from django.shortcuts import render
 
 
 def send_notification(ip_address):
@@ -12,3 +13,7 @@ def send_notification(ip_address):
         },
     )
     return True
+
+
+def index(request):
+    return render(request, "notifications/index.html")
