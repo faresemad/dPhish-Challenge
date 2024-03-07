@@ -10,4 +10,5 @@ urlpatterns = [
 # API patterns for Local Apps
 urlpatterns += [
     path(f"{settings.API_PREFIX}scanner/", include("apps.scanner.api.urls")),
+    path(f"{settings.API_PREFIX}notifications/", include("apps.notifications.urls")),
 ]
