@@ -10,7 +10,6 @@ def send_notification(request):
         {
             "type": "notification_message",
             "message": "Done Process 8.8.8.8",
-            "user": "admin",
         },
     )
     return HttpResponse("Sent")

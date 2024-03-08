@@ -1,8 +1,7 @@
 from django.urls import path
 
-from apps.notifications.views import index, send_notification
+from apps.notifications.views import test
 
 urlpatterns = [
-    path("", index, name="index"),
-    path("send/", send_notification, name="send_notification"),
+    path("test/", test, name="test"),
 ]
